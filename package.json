@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Animation CSS / Préprocesseur Sass / Environnement de travail Git &amp; Github",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:public/css/style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farrradise/ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farrradise/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/farrradise/ohmyfood#readme"
+}
