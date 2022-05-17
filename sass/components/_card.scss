@@ -1,0 +1,56 @@
+.card {
+    @include rounded;
+    overflow: hidden;
+    padding: 0;
+    margin-bottom : 20px;
+
+    figure {
+        // border :1px solid black;
+        width : 100%;
+        margin : 0;
+        position :relative;
+    }
+
+    &__caption {
+        display : flex;
+        align-items: center;
+        padding: $padding-classique;
+    }
+
+    &__tag {
+        position :absolute;
+        top : 0;
+        padding: 4px 10px;
+        right : 20px;
+        font-size : 14px;
+        border-radius: 2px;
+        color : darken($color-tertiary, 40);
+        font-weight: 700;
+        background-color: $color-tertiary;
+    }
+
+    &__img {
+        // max-width : 300px;
+        width : 100%;
+        height: 200px;
+        object-fit: cover;
+        // border : 1px solid red;
+    }
+
+    &__title {
+        flex-grow: 2;
+        > * {
+            margin : 0;
+        }
+        p {
+            font-weight: 300;
+            font-size : 14px;
+            margin-top : 6px;
+        }
+    }
+
+    i {
+        font-size : 24px;
+    }
+
+}

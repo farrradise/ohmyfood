@@ -1,0 +1,20 @@
+.footer {
+    background-color : $darkGrey;
+    padding : $padding-classique;
+
+    img {
+        filter: brightness(0) invert(1);
+        width : 120px;
+    }
+
+
+    &__item {
+        line-height: 1.9rem;
+        color :white;
+
+        i {
+            width : 10px;
+            padding-right : 24px;
+        }
+    }
+}

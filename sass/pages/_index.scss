@@ -1,6 +1,68 @@
 main {
-    background-color: red;
-    font-family: $fancy-font;
-    color : $color-primary;
-    background-color: $color-secondary;
+}
+
+.entete {
+    background-color: $lightGrey;
+    text-align: center;
+    &__ville {
+        padding: $padding-classique;
+        background-color: $grey;
+    }
+
+    &__desc {
+        padding: $padding-classique;
+    }
+}
+.modeEmploi {
+    padding: $padding-classique;
+    
+    .step {
+        @include rounded;
+        background-color : $lightGrey;
+        position : relative;
+        height : 80px;
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+        color : $darkGrey;
+        transition : background-color cubic-bezier(0.6, 0.04, 0.98, 0.335) 0.3s;
+
+        &__number {
+            background-color : $color-primary;
+            padding : 5px 8px;
+            font-size : 12px;
+            font-weight: 700;
+            color: white;
+            position : absolute;
+            left : -8px;
+            top : 50%;
+            transform: translateY(-50%);
+
+            border-radius: 50px;
+        }
+
+        i {
+            padding : 0 20px 0;
+            color : lighten($darkGrey, 30);
+        }
+
+        &__title {
+            margin-right : auto;
+            font-weight: 600;
+        }
+
+        &:hover {
+            background-color: lighten($color-primary, 35);
+
+            i {
+                color : $color-primary;
+            }
+        }
+    }
+}
+
+.restaurants {
+    padding: $padding-classique;
+    background-color: $lightGrey;
+
 }

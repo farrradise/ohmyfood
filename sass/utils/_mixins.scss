@@ -1,4 +1,4 @@
-@import "./variables";
+// @import "./variables";
 
 @mixin mobile-only {
     @media screen and (max-width: map-get($breakpoints, tablet)){
@@ -18,5 +18,12 @@
     }
 }
 
-
 // @include mobile-only;
+
+
+@mixin rounded {
+    border-radius: 20px;
+    display: block;
+    box-shadow: 2px 5px 15px lightGrey;
+    padding : 10px;
+}
