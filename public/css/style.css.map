@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../sass/main.scss"],"names":[],"mappings":"AAIA,IACI,qBACA","file":"style.css"}
+{"version":3,"sourceRoot":"","sources":["../../sass/utils/_variables.scss","../../sass/pages/_index.scss"],"names":[],"mappings":"AAOQ,kVCPR,KACI,qBACA,YDMS,YCLT,MDFa,QCGb,iBDFe","file":"style.css"}

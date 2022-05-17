@@ -2,14 +2,11 @@
 @import "./utils/mixins";
 @import "./utils/functions";
 
-div {
-    background-color: red;
-    border : 1px solid red;
-}
-// importer 
-// vendors
-// Base.
-// Composants.
-// Layout.
-// Pages.
-// Thèmes.
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/index";
+@import "./pages/restaurant";
+
+
