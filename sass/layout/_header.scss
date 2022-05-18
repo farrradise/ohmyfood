@@ -1,4 +1,9 @@
 .header {
+    z-index: 2;
+    background-color: white;
+    position: relative;
+    // à voir avec David
+    border :1px solid white;
     
     nav {
         display :none;
@@ -8,5 +13,14 @@
         width : 160px;
         display : flex;
         margin : 20px auto;
+    }
+
+    .goToHp {
+        position : absolute;
+        top: 50%;
+        left : 50px;
+        transform : translateY(-50%);
+        font-size : 27px;
+        color : $darkGrey;
     }
 }

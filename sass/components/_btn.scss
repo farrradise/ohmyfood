@@ -1,0 +1,11 @@
+.btn {
+    @include rounded;
+    border-radius: 50px;
+    font-weight: 600;
+    color : white;
+    background: linear-gradient(75deg, $color-secondary, $color-primary);
+    padding : 20px 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

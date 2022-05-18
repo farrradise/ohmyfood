@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: $main-font;
+    line-height: 1.3rem;
 }
 
 ul {
@@ -12,4 +13,30 @@ ul {
 a {
     color : inherit;
     text-decoration: none;
+}
+
+h1 {
+    font-family: $fancy-font;
+    font-size : 26px;
+    display : flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+h3 {
+    font-weight: 300;
+    color: $darkGrey;
+    text-transform: uppercase;
+    position : relative;
+    margin-bottom : 35px;
+    &:after {
+        content :"";
+        position :absolute;
+        width : 35px;
+        bottom : -10px;
+        left : 0;
+        height: 3px;
+        background-color: $color-tertiary;
+
+    }
 }

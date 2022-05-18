@@ -1,0 +1,93 @@
+.pageResto {
+
+    .banner {
+        min-height : 240px;
+        overflow: hidden;
+        position : relative;
+    
+        img {
+            width : calc(100% + 200px);
+            object-fit: cover;
+            position: fixed;
+            top : 0px;
+            z-index :-1;
+
+        }
+
+    }
+
+
+    .menu {
+        background-color : $lightGrey;
+        padding: $padding-classique;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        display : flex;
+        flex-flow : column nowrap;
+
+        &__part {
+            margin-bottom : 30px;
+        }
+
+        &__meal {
+            @include rounded;
+            padding : 0;
+            background-color: white;
+            margin-bottom : 30px;
+            display : flex;
+            overflow: hidden;
+
+            
+            &:hover {
+                .menu__checked {
+                    width : 60px;
+
+                    i {
+                        transform: rotate(360deg);
+
+                    }
+
+                }
+            }
+        }
+
+        &__title {
+            @extend .card__title;
+            padding : 10px 15px;
+            // David question pourquoi mettre le overflow aussi sur le parent ?
+            overflow: hidden; 
+            > * {
+                overflow: hidden; 
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+
+        &__price {
+            font-weight : 600;
+            align-self: flex-end;
+            padding : 0 22px 0 15px;
+        }
+
+        &__checked {
+            transition : all ease-in-out 0.3s;
+            width : 0px;
+            background-color: $color-tertiary;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            color : white;
+            font-size : 26px;
+            display :flex;
+            i {
+                transition : all ease-out 0.6s;
+                margin :auto;
+                transform: rotate(0deg);
+
+            }
+        }
+
+        .btn {
+            margin : -20px auto 40px;
+        }
+    }
+}
