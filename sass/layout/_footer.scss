@@ -7,6 +7,18 @@
         width : 120px;
     }
 
+    nav {
+        @include laptop {
+            display : flex;
+            justify-content: space-between;
+            
+            ul {
+                margin-right : 80px;
+
+            }
+        }
+    }
+
 
     &__item {
         line-height: 1.9rem;
@@ -18,5 +30,15 @@
         }
     }
 
-    border :1px solid red;
+    // max-width : 100px;
+    
+    &__container {
+        max-width : 1200px;
+        margin : auto;
+
+        @include tablet {
+            display : flex;
+            justify-content: space-around;
+        }
+    }
 }
