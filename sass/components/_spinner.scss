@@ -1,0 +1,63 @@
+.spinner {
+    width: 100vw;
+    position : fixed;
+    background-color: $color-tertiary;
+    z-index : 10;
+    height : 100Vh;
+    display : none;
+    justify-content: center;
+    align-items: center;
+    &__bar{
+        transition : transform ease-in-out 4s;
+        position: absolute;
+        width: 50px;
+        height : 10px;
+        border-radius: 50px;
+        font-weight: 600;
+        color : white;
+        background: linear-gradient(75deg, $color-secondary, $color-primary);
+        
+        &:nth-child(1) {
+            transform: rotate(90deg);
+        }
+
+        &:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        &:nth-child(3) {
+            transform: rotate(135deg);
+        }
+
+
+
+        // @mixin test($number) {
+        //     @each $state, $palette in $palettes{
+        //           &:#{$state}{
+        //             border: .1rem solid map-get($palette, border);
+        //             background-color: map-get($palette, bg);
+        //             color: map-get($palette, txt);
+        //     }
+        //      }
+        //     }
+    }
+
+    &:hover {
+      .spinner {
+          &__bar {
+            &:nth-child(1) {
+                transform: rotate(9deg);
+            }
+    
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+    
+            &:nth-child(3) {
+                transform: rotate(135deg);
+            }
+    
+          }
+      }      
+    }
+}
