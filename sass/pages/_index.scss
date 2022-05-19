@@ -2,13 +2,44 @@ main {
 }
 
 .entete {
-    background-color: $lightGrey;
+
     text-align: center;
-    padding-bottom: 40px;
+    // width :100px;
+    
+    @include laptop {
+        position :relative;
+        height : calc(100vh - 200px);
+        
+        &:before {
+            content :"";
+            width : 100%;
+            height : 100%;
+            left : 0;
+            position : absolute;
+            background-image: url('../img/restaurants/shaw.jpg');
+            background-size: cover;
+            background-color: $color-tertiary;
+            background-repeat: no-repeat;
+            z-index : -1;
+            background-attachment: fixed;
+        }
+
+        &:after {
+            content :"";
+            width : 100%;
+            height : 100%;
+            left : 0;
+            position : absolute;
+            background-color: $color-tertiary;
+            filter : opacity(0.79);
+            z-index : -1;
+        }
+    }
 
     &__ville {
         padding: $padding-classique;
         background-color: $grey;
+
 
         i {
             padding : 0 15px;
@@ -25,10 +56,37 @@ main {
     }
 
 
+    &__box {
+        background-color: $lightGrey;
+        padding-bottom: 40px;
+
+        @include laptop {
+            @include rounded;
+            width : 45%;
+            // border : 1px solid red;
+            padding : 30px 55px;
+            max-width: 480px;
+            position : absolute;
+            left : 20%;
+            bottom : 20%;
+        }   
+    }
+
+
 
 }
+
 .modeEmploi {
     padding: $padding-classique;
+
+    .steps {
+        @include tablet {
+            display : flex;
+            justify-content: space-between;
+            max-width : 1180px;
+            margin: auto auto 50px;
+        }
+    }
     
     .step {
         @include rounded;
@@ -40,6 +98,10 @@ main {
         align-items: center;
         color : $darkGrey;
         transition : background-color cubic-bezier(0.6, 0.04, 0.98, 0.335) 0.3s;
+
+        @include tablet {
+            width : 30%;
+        }
 
         &__number {
             background-color : $color-primary;
@@ -56,6 +118,10 @@ main {
             top : 50%;
             transform: translateY(-50%);
             border-radius: 50px;
+
+            @include laptop {
+                transform: translate(-45%, -50%) scale(1.72);
+            }
         }
 
         i {
@@ -81,5 +147,32 @@ main {
 .restaurants {
     padding: $padding-classique;
     background-color: $lightGrey;
+
+    
+    > div {
+        margin: auto;
+        
+        @include tablet {
+            // max-width : 700px;
+            display : flex;
+            flex-flow :  row wrap;
+            justify-content: space-around;
+            // border : 1px solid red;
+            
+            .card {
+                width : 45%;
+            }
+        }
+        
+        @include laptop {
+            flex-flow :  row nowrap;
+            max-width : 1200px;
+            // border : 1px solid black;
+            
+            .card {
+                width : 23%;
+            }
+        }
+    }
 
 }
