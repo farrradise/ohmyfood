@@ -19,9 +19,16 @@
 // @include mobile-only;
 
 
-@mixin rounded {
+// @mixin rounded {
+//     border-radius: 20px;
+//     display: block;
+//     box-shadow: 2px 5px 15px lightGrey;
+//     padding : 10px;
+// }
+
+@mixin rounded($shadow:lightGrey) {
     border-radius: 20px;
     display: block;
-    box-shadow: 2px 5px 15px lightGrey;
+    box-shadow: 2px 5px 15px $shadow;
     padding : 10px;
 }

@@ -59,15 +59,21 @@ main {
     &__box {
         background-color: $lightGrey;
         padding-bottom: 40px;
+        
 
         @include laptop {
-            @include rounded;
+            @include rounded(#6c6c6c9c);
             width : 60%;
             padding : 15px 45px;
             max-width: 480px;
             position : absolute;
             left : 20%;
             bottom : 15%;
+
+            .entete & {
+                // pour identifier parent !
+                // border : 5px solid red!important;
+            }
         }   
     }
 
