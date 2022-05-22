@@ -1,0 +1,33 @@
+.fa-heart {
+
+    &.fa-light {
+        z-index: 999;
+        color : $darkGrey;
+    }
+
+    &:hover {
+        
+        &.fa-solid {
+            // background-color: red;
+        }
+        
+        & + .fa-solid  {
+            transform: scale(1);
+
+            // color: linear-gradient(75deg, $color-secondary, $color-primary);
+                                    
+        }
+    }
+
+    &.fa-solid {
+        position :absolute;
+        right : 20px;            
+        color : $color-primary;
+        display : inline-block;
+        transform: scale(0);
+        transition : transform 0.3s ease-in-out;
+
+    }
+    
+    
+}
