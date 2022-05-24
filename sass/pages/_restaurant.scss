@@ -41,7 +41,6 @@
         }
 
         .container {
-            // border : 1px solid red;
             display : flex;
             flex-flow : column nowrap;
             justify-content: space-between;
@@ -67,7 +66,8 @@
             margin-bottom : 30px;
             display : flex;
             overflow: hidden;
-
+            opacity: 0;
+            transform: translate(0px, 0px);
             
             &:hover {
                 .menu__checked {
@@ -75,9 +75,13 @@
 
                     i {
                         transform: rotate(360deg);
-
                     }
+                }
+            }
 
+            @for $i from 1 through 20 {
+                &.meal-#{$i} {
+                    animation: fadeUp 700ms forwards unquote(($i * 100)+"ms");
                 }
             }
         }
@@ -85,7 +89,6 @@
         &__title {
             @extend .card__title;
             padding : 10px 15px;
-            // David question pourquoi mettre le overflow aussi sur le parent ?
             overflow: hidden; 
             > * {
                 overflow: hidden; 

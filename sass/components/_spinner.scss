@@ -50,10 +50,11 @@
 
 .spinner {
     width: 100%;
+    display: none;
     position : fixed;
     opacity: 1;
     background-color: $color-primary;
-    background: linear-gradient(to bottom, $color-secondary 0%, $color-primary 400px, $color-primary);
+    background: radial-gradient(ellipse, $color-primary -20%, $color-primary 200px, lighten($color-secondary, 3) 190%);
     z-index : 10;
     height : 100Vh;
     animation: remover 1000ms forwards 8000ms ;

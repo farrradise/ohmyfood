@@ -37,13 +37,19 @@ main {
     }
 
     &__ville {
-        padding: $padding-classique;
         background-color: $grey;
-
-
+        
         i {
-            padding : 0 15px;
-
+            padding : 0 15px;          
+        }
+        
+        input {
+            max-width : 100%;
+            padding: $padding-classique;
+            background-color: inherit;
+            height : 100%;
+            padding : 20px;
+            border : none;
         }
 
     }
@@ -59,6 +65,7 @@ main {
     &__box {
         background-color: $lightGrey;
         padding-bottom: 40px;
+
         
 
         @include laptop {

@@ -13,6 +13,14 @@
         display : inline-block;
         transform: scale(0);
         transition : all 0.3s ease-in-out;
+
+        // background: linear-gradient($color-primary, $color-secondary);
+        // background-clip: text;
+        // text-fill-color: transparent;
+      
+        background: -webkit-linear-gradient($color-primary, $color-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     &:hover {       
