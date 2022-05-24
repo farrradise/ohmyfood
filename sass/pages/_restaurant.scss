@@ -127,5 +127,14 @@
 
     h1 {
         flex-basis : 100%;
+        span {
+
+            position: relative;
+            display: inline-block;
+
+            .fa-solid {
+                right : 0;
+            }
+        }
     }
 }
