@@ -10,3 +10,53 @@
         transform : translate(0, 0px);
     }   
 }
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(-60deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }    
+}
+
+@keyframes fade {
+    from {
+        opacity : 1;
+        transform: scale(1);
+    }
+    30% {
+        opacity : 1;
+        transform : scale(0.95);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes remover {
+    0% {
+        visibility: visible;
+        z-index : 10;
+        opacity : 1;
+    }
+
+    90% {
+        opacity : 0;
+        z-index: 10;
+        visibility: visible;
+    }
+    100% {
+        opacity : 0;
+        z-index : -1;
+        visibility: hidden;
+    }
+}

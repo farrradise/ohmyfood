@@ -1,63 +1,14 @@
-@keyframes spinner {
-    from {
-        transform: rotate(0deg);
-    }
-    30% {
-        transform: rotate(0deg);
-    }
-    40% {
-        transform: rotate(-60deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }    
-}
-
-@keyframes fade {
-    from {
-        opacity : 1;
-        transform: scale(1);
-    }
-    30% {
-        opacity : 1;
-        transform : scale(0.95);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.2);
-    }
-}
-
-@keyframes remover {
-    0% {
-        visibility: visible;
-        z-index : 10;
-        opacity : 1;
-    }
-
-    90% {
-        opacity : 0;
-        z-index: 10;
-        visibility: visible;
-    }
-    100% {
-        opacity : 0;
-        z-index : -1;
-        visibility: hidden;
-    }
-}
 
 .spinner {
     width: 100%;
-    display: none;
+    // display: none;
     position : fixed;
     opacity: 1;
     background-color: $color-primary;
     background: radial-gradient(ellipse, $color-primary -20%, $color-primary 200px, lighten($color-secondary, 3) 190%);
     z-index : 10;
     height : 100Vh;
-    animation: remover 1000ms forwards 8000ms ;
+    animation: remover 1000ms forwards 6000ms ;
     
     &__bg {
         width : 100%;
@@ -90,7 +41,7 @@
         img {
             position : relative;
             transform: rotate(0);
-            animation: spinner 3000ms infinite;
+            animation: spinner 2500ms infinite;
             width : 100%;
         }
     }
@@ -108,7 +59,7 @@
         position :relative;
         transform : scale(1);
         opacity : 1;
-        animation : fade 500ms forwards 7000ms; 
+        animation : fade 500ms forwards 6000ms; 
         // animation: name duration timing-function delay iteration-count direction fill-mode;
       
     }
